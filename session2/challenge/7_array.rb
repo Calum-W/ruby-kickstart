@@ -8,3 +8,15 @@
 # alternate_words("Lorem ipsum dolor sit amet.")  # => ["Lorem", "dolor", "amet"]
 # alternate_words("Can't we all get along?")      # => ["Can't", "all", "along"]
 # alternate_words("Elementary, my dear Watson!")  # => ["Elementary", "dear"]
+
+def alternate_words(str)
+  words = str.split.map { |x| x.gsub(/[^0-9A-Za-z']/, '') }
+  words.reject! { |y| y.empty? }
+
+  to_return = []
+  words.each_with_index do |word, index|
+  	to_return << word if index.even?
+  end
+
+  p to_return
+end

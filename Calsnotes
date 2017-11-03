@@ -1,0 +1,4 @@
+2:1 - Not completed. I don't understand the input method.
+2:3 - Completed, but after some confusion. Instructions say to return an array but it actually needs to be a string.
+2:6 - Not completed. My solution works on all tests on my computer but not on the rake test.
+2:7 - Not completed. The apostrophe used in the rake file is different so the solution won't pass, despite working on my computer.

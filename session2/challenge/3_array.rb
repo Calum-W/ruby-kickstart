@@ -7,5 +7,12 @@
 
 class String
   def every_other_char
+    to_return = ''
+    each_char.with_index do |character, index|
+      if index.even?
+        to_return += character
+      end
+    end
+    to_return
   end
 end

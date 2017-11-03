@@ -14,3 +14,19 @@
 # prime_chars? ['ab', 'cd']       # => false
 # prime_chars? ['a', 'bcd']       # => false
 # prime_chars? ['a', 'b', 'cd']   # => false
+
+
+def prime_chars?(ary)
+    sum = 0
+    ary.each { |x| sum += x.length }
+    
+    prime = true
+
+    for y in 2..Math.sqrt(sum).to_i
+    	if sum % y == 0
+    		prime = false
+    	end
+    end
+
+    return prime
+end
