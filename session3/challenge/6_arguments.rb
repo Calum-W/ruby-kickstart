@@ -17,3 +17,24 @@
 # match_maker true,  true,  true, true, nil     # => [false, true]
 # match_maker true,  true,  true, 0, nil        # => [false, true]
 
+def match_maker(truthsetter, *values)
+    answer = []
+    values.each_slice 2 do |first, second|
+        first = !!first
+        second = !!second
+        result = if truthsetter
+                     first != second
+                 else
+                     first == second
+                 end
+        answer << result
+    end
+    answer
+end
+        
+        
+        
+        
+        
+        
+        
